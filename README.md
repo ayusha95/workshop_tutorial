@@ -26,6 +26,10 @@ We need to tell the computer to read its Prerequisites. Type this command into y
 (It won't look like much happened, but your computer just finished reading!)
 Step 2: Look for the Robot! 🕵️‍♂️
 
+Check if lidar is running of the turtlebot. If not then run this command: 
+
+        ros2 service call /start_motor std_srvs/srv/Empty {}
+        
 Now, let's see if the robot is sending any data. Type this to see a list of everything the robot is sending:
 
     ros2 topic list
