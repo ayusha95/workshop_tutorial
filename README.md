@@ -2,31 +2,14 @@ Overview
 
 Before interacting with the TurtleBot 4, your shell environment must be configured with specific ROS 2 Middleware (RMW) settings. This ensures your workstation can communicate with the robot via the Discovery Server protocol.
 
-🎒 What you need
-
-Prerequisites
-
-Your ~/.bashrc file must be configured with the following environment variables:
-
-    ROS_DOMAIN_ID: Unique ID for your robot network. We use: export ROS_DOMAIN_ID=1
-
-    RMW_IMPLEMENTATION: Typically set to rmw_fastrtps_cpp. We use: export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
-
-    ROS_DISCOVERY_SERVER: The IP and port of the TurtleBot 4 discovery hub. We use: export ROS_DISCOVERY_SERVER=192.168.3.148:11811
-
-    Super Client Configuration: XML path to allow your PC to "see" all nodes. We use: export ROS_SUPER_CLIENT=True
 
 🚀 Let's Start!
-Step 1: Wake Up the Secrets ⚡
 
-We need to tell the computer to read its Prerequisites. Type this command into your terminal:
+Step 1: Open the Terminator.
 
-    source ~/.bashrc
-
-(It won't look like much happened, but your computer just finished reading!)
 Step 2: Look for the Robot! 🕵️‍♂️
 
-Check if lidar is running of the turtlebot. If not then run this command: 
+Check if lidar is running on the turtlebot. If not then run this command: 
 
         ros2 service call /start_motor std_srvs/srv/Empty {}
         
